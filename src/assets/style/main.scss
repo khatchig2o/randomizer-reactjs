@@ -1,0 +1,57 @@
+header{
+  height: 80px;
+  width: 100%;
+  background-color: #00A3FF;
+}
+.main-div{
+  width: 75%;
+  height: 800px;
+  overflow-y: scroll;
+  background-color: grey;
+}
+.side-div{
+  background-color: #2F956D;
+  width: 25%;
+  height: 800px;
+  text-align: center;
+  font-size: 30px;
+  p{
+    margin: 20px;
+  }
+}
+.parent{
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.center-text{
+  justify-content: center;
+  align-items: center;
+  height: 75%;
+}
+
+.number-div{
+
+  width: 20%;
+  height: 300px;
+  color: black;
+  background-color: white;
+  font-size: 30px;
+}
+
+.dleting-div{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 400px;
+  background-color: #1A1A1D;
+  color: white;
+  font-size: 25px;
+  button{
+    margin: 20px;
+    padding:5px 10px;
+  }
+}
+
