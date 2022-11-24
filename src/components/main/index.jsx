@@ -29,12 +29,11 @@ export default function Main(){
             if (done) {
                 setdiv(prevdev => prevdev.filter((elemrn, i) => i !== numbers))
                 seDone(false)
-                setnumbers('')
                 setView("none")
-
+                setnumbers('')
             }
         },
-        [done])
+        [done,numbers])
 
     return <>
         <header>
