@@ -6,7 +6,7 @@ export default function Divewithnum({number,nums,deleteitem}){
         <button className={"div-exit"} onClick={()=> deleteitem(nums)}>X</button>
        <div className={"center-text G-flex"}>
            <p>
-               {number.number}
+               {number}
            </p>
        </div>
     </div>

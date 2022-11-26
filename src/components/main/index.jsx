@@ -1,16 +1,14 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import Divewithnum from "./divewithnum/insdex";
 
 export default function Main(){
     const [divs,setdiv]=useState([])
     const [view,setView]=useState("none")
-    const [done,seDone]=useState(false)
     const [numbers,setnumbers]=useState()
 
     const random=()=>{
         let x= Math.floor(Math.random()*999 +1)
-        let c={number : x}
-        setdiv(divs=>[...divs,c])
+        setdiv(divs=>[...divs,x])
     }
 
     const deleteitem=(nums)=>{
@@ -22,21 +20,16 @@ export default function Main(){
         setnumbers('')
     }
     const yes=()=>{
-        seDone(true)
+        //splice or filter both work
+        divs.splice(numbers,1)
+        // setdiv(prevdev => prevdev.filter((elemrn, i) => i !== numbers))
+
+        setView("none")
+        setnumbers('')
     }
     const  deleteall=()=>{
         setdiv([])
     }
-
-    useEffect(() => {
-            if (done) {
-                setdiv(prevdev => prevdev.filter((elemrn, i) => i !== numbers))
-                seDone(false)
-                setView("none")
-                setnumbers('')
-            }
-        },
-        [done,numbers])
 
     return <>
         <header>
@@ -48,7 +41,12 @@ export default function Main(){
         <section className="G-flex">
             <div className={"main-div G-flex-wrap parent"}>
                 {divs.map((number,index)=>(
-                    <Divewithnum number={number} key={index} nums={index} deleteitem={deleteitem}/>
+                    <Divewithnum
+                        number={number}
+                        key={index}
+                        nums={index}
+                        deleteitem={deleteitem}
+                    />
                 ))}
             </div>
             <div className={"side-div"}>
