@@ -1,13 +1,22 @@
+body{
+  background-color: #2D2F33;
+}
+
 header{
   height: 80px;
   width: 100%;
   background-color: #00A3FF;
+  text-align: center;
+  button{
+    margin: 10px;
+  }
 }
 .main-div{
   width: 75%;
   height: 800px;
   overflow-y: scroll;
   background-color: grey;
+  padding-bottom: 10px;
 }
 .side-div{
   background-color: #2F956D;

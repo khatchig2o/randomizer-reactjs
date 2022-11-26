@@ -24,6 +24,9 @@ export default function Main(){
     const yes=()=>{
         seDone(true)
     }
+    const  deleteall=()=>{
+        setdiv([])
+    }
 
     useEffect(() => {
             if (done) {
@@ -40,6 +43,7 @@ export default function Main(){
             <button onClick={random}>
                 add div
             </button>
+            <button onClick={deleteall}>Delete all divs</button>
         </header>
         <section className="G-flex">
             <div className={"main-div G-flex-wrap parent"}>
